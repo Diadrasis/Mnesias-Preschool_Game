@@ -4,7 +4,7 @@
   </a>
   <br/>
   
-Η εκπαιδευτική εφαρμογή Μνησίας για Προσχολική Ηλικία.
+Η εκπαιδευτική εφαρμογή Μνησίας για Προσχολική Ηλικία.Google Play: https://play.google.com/store/apps/details?id=net.Diadrasis.MnesiasPreSchool App Store:
   
 ## Privacy Policy
   
