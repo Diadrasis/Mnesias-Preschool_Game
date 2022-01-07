@@ -1,0 +1,29 @@
+fileFormatVersion: 2
+guid: 5e213de605a3dae41baea7187c8c3451
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - PF FuturaNeu Rounded
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 9c1592ce2f061a74b94a62be122ef4f8, type: 3}
+  - {fileID: 12800000, guid: 08ee038c233abe24688968d1ec2bc4dd, type: 3}
+  - {fileID: 12800000, guid: 4ca72c49257cc2c46946193c34c1bb0a, type: 3}
+  - {fileID: 12800000, guid: fc7f05a20f61e9444a56b12c80bca68f, type: 3}
+  - {fileID: 12800000, guid: ce6989042ccab964da7806f0becef219, type: 3}
+  - {fileID: 12800000, guid: 4113fd75d986fbe43b59575ad9b93a27, type: 3}
+  - {fileID: 12800000, guid: 4a652358ced80de4b9ee6349ba77f610, type: 3}
+  - {fileID: 12800000, guid: e9a961a58c814214c9d179e1645d491b, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
