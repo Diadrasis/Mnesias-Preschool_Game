@@ -4,7 +4,7 @@
   </a>
   <br/>
   
-Η εκπαιδευτική εφαρμογή Μνησίας για Προσχολική Ηλικία. Σκοπός της εφαρμογής είναι να μάθει ο χρήστης να αναγνωρίζει τα ηχοχρώματα της λύρας και του αυλού. Είναι βασισμένο στο γνωστό παραμύθι του Αισώπου, λαγός και χελώνα ώστε να βοηθάει τα παιδιά της προσχολικής ηλικίας να αναγνωρίζουν πιο εύκολα τους ήχους.<a href="https://play.google.com/store/apps/details?id=net.Diadrasis.MnesiasPreSchool" target="_blank"> Google Play</a> <a href="https://apps.apple.com/mn/app/mnesias-%CF%80%CF%81%CE%BF%CF%83%CF%87%CE%BF%CE%BB%CE%B9%CE%BA%CF%8C-%CF%80%CE%B1%CE%B9%CF%87%CE%BD%CE%AF%CE%B4%CE%B9/id1600906351" target="_blank">App Store</a>
+Η εκπαιδευτική εφαρμογή Μνησίας για Προσχολική Ηλικία. Σκοπός της εφαρμογής είναι να μάθει ο χρήστης να αναγνωρίζει τα ηχοχρώματα της λύρας και του αυλού. Είναι βασισμένο στο γνωστό παραμύθι του Αισώπου, λαγός και χελώνα ώστε να βοηθάει τα παιδιά της προσχολικής ηλικίας να αναγνωρίζουν πιο εύκολα τους ήχους.<a href="https://play.google.com/store/apps/details?id=net.Diadrasis.MnesiasPreSchool" target="_blank"> Google Play</a>, <a href="https://apps.apple.com/mn/app/mnesias-%CF%80%CF%81%CE%BF%CF%83%CF%87%CE%BF%CE%BB%CE%B9%CE%BA%CF%8C-%CF%80%CE%B1%CE%B9%CF%87%CE%BD%CE%AF%CE%B4%CE%B9/id1600906351" target="_blank">App Store</a>
   
 ## Privacy Policy
   
