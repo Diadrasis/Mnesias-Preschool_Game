@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
     public ButtonManager[] buttonManager; //to get some methods from current manager
     public AudioManagerPreSchool audioManager; //to get some methods from current manager
 
+    UIManager iManager;
     int scoreTries/*, highscoreTries*/;//tries for a player
    
     // Start is called before the first frame update
@@ -44,6 +45,7 @@ public class GameManager : MonoBehaviour
         imgContainer.GetComponent<Image>().sprite = imgMainComment;
         audioManager.AudioInit();
         buttonManager = FindObjectsOfType<ButtonManager>();
+        iManager = FindObjectOfType<UIManager>();
         //foreach (GameObject go in spContainer) go.SetActive(false);
         //highscoreText.text = "Συνολικές Προσπάθειες¨";
         spContainerA.SetActive(false);
@@ -59,6 +61,8 @@ public class GameManager : MonoBehaviour
     private void ClosePanel()
     {
         pnlContainer.SetActive(false);
+        ResetUIElements();
+        iManager.Reset();
     }
 
     //when we hear the sound, the instrument buttons won't be interactable

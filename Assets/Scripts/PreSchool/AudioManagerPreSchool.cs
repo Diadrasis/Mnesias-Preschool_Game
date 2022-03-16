@@ -58,9 +58,10 @@ public class AudioManagerPreSchool : MonoBehaviour
         isLyra = false;
         isAulos = false;
         float randPick = Random.value;
-        Debug.Log("RandomNum: "+randPick);
-        int clipPick = Random.Range(0, clips.Length +(int)randPick);
+        
+        int clipPick = Random.Range(0, clips.Length +1);
         sourceCam.clip = clips[clipPick];
+        Debug.Log("RandomNum: " + clipPick);
 
         gameManager.imgContainer.GetComponent<Image>().sprite = gameManager.imgMainCommentAfterSound;
         gameManager.imgContainer.GetComponent<Button>().interactable = false;

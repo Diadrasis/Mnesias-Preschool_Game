@@ -20,18 +20,7 @@ public class MainMenuManager : MonoBehaviour
     public GameObject pnlPreS;
     public Button btnPreSchool;
 
-    [Space]
-    [Header("ElementarySchoolElements")]
-    public GameObject pnlElementary;
-    public Button btnElementary;
-
-
-    [Space]
-    [Header("HighSchoolElements")]
-    public GameObject pnlHighS;
-    public Button btnHigh;
-
-    
+    UIManager uIManagerInst;
 
     // Start is called before the first frame update
     void Start()
@@ -40,51 +29,29 @@ public class MainMenuManager : MonoBehaviour
         btnBack.gameObject.SetActive(false);
         SubscribeToMenuButtons();
         imgColor = btnImage.color;
-        
+        uIManagerInst = FindObjectOfType<UIManager>();
     }
 
     private void SubscribeToMenuButtons()
     {
-        btnElementary.onClick.AddListener(OpenElementary);
+        //btnElementary.onClick.AddListener(OpenElementary);
         btnPreSchool.onClick.AddListener(OpenPreSchool);
-        btnHigh.onClick.AddListener(OpenHighSchool);
-        btnBack.onClick.AddListener(BackPanels);
+        //btnHigh.onClick.AddListener(OpenHighSchool);
+        //btnBack.onClick.AddListener(BackToMain);
         
     }
 
-    private void BackPanels()
-    {
-        if (pnlNextSelection.activeSelf)
-        {
-            pnlNextSelection.SetActive(false);
-            pnlMainMenuButtons.SetActive(true);
-            btnBack.gameObject.SetActive(false);
-        }
-    }
-
-    private void OpenHighSchool()
-    {
-        OpenClosePanels(false, true, false, false, true, false);
-        btnBack.gameObject.SetActive(true);
-        StartCoroutine(ImageOpacity());
-        btnPlay.onClick.AddListener(() => LoadLevelGame("HighSchool"));
-    }
-
+    
     private void OpenPreSchool()
     {
         OpenClosePanels(false, true, true, false, false, false);
         btnBack.gameObject.SetActive(true);
         StartCoroutine(ImageOpacity());
         btnPlay.onClick.AddListener(() => LoadLevelGame("PreSchoolGame"));
+
     }
 
-    private void OpenElementary()
-    {
-        OpenClosePanels(false, true, false, true, false, false);
-        btnBack.gameObject.SetActive(true);
-        StartCoroutine(ImageOpacity());
-        btnPlay.onClick.AddListener(()=>LoadLevelGame("ElementarySchool"));
-    }
+    
 
     public void LoadLevelGame(string nameScene)
     {
@@ -96,8 +63,8 @@ public class MainMenuManager : MonoBehaviour
         pnlMainMenuButtons.SetActive(pnlMain);
         pnlNextSelection.SetActive(pnlNext);
         pnlPreS.SetActive(pnlPre);
-        pnlElementary.SetActive(pnlEle);
-        pnlHighS.SetActive(pnlHigh);
+        //pnlElementary.SetActive(pnlEle);
+        //pnlHighS.SetActive(pnlHigh);
         topBar.SetActive(topB);
     }
 
@@ -129,6 +96,16 @@ public class MainMenuManager : MonoBehaviour
     #region NotInUse
     /*public List<GameObject> sprImagesPre = new List<GameObject>();
     GameObject currentImage;*/
+    /*[Space]
+    [Header("ElementarySchoolElements")]
+    public GameObject pnlElementary;
+    public Button btnElementary;
+
+
+    [Space]
+    [Header("HighSchoolElements")]
+    public GameObject pnlHighS;
+    public Button btnHigh;*/
 
 
     /*void ShowFirstImage()
@@ -183,6 +160,31 @@ public class MainMenuManager : MonoBehaviour
         currentImage.SetActive(false);
         sprImagesPre[indx].SetActive(true);
         currentImage = sprImagesPre[indx];
-    }*/
+    }
+    
+     private void OpenHighSchool()
+    {
+        OpenClosePanels(false, true, false, false, true, false);
+        btnBack.gameObject.SetActive(true);
+        StartCoroutine(ImageOpacity());
+        btnPlay.onClick.AddListener(() => LoadLevelGame("HighSchool"));
+    }
+    private void OpenElementary()
+    {
+        OpenClosePanels(false, true, false, true, false, false);
+        btnBack.gameObject.SetActive(true);
+        StartCoroutine(ImageOpacity());
+        btnPlay.onClick.AddListener(() => LoadLevelGame("ElementarySchool"));
+    }
+    private void BackToMain()
+    {
+        if (pnlNextSelection.activeSelf)
+        {
+            pnlNextSelection.SetActive(false);
+            pnlMainMenuButtons.SetActive(true);
+            btnBack.gameObject.SetActive(false);
+        }
+    }
+    */
     #endregion
 }
