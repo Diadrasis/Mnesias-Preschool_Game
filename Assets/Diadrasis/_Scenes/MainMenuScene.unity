@@ -727,6 +727,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 933464700}
     m_Modifications:
+    - target: {fileID: 8159855205002608537, guid: 8fe16de0e2e2a244588a854f70965f93, type: 3}
+      propertyPath: m_fontSize
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 8159855205002608537, guid: 8fe16de0e2e2a244588a854f70965f93, type: 3}
+      propertyPath: m_fontSizeMax
+      value: 55
+      objectReference: {fileID: 0}
     - target: {fileID: 8159855205272054746, guid: 8fe16de0e2e2a244588a854f70965f93, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1697,7 +1705,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4876ce2dbd054ab4fb2e69f717b4b12b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0823fcfd0a95b484bb00f725e50f82f7, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
