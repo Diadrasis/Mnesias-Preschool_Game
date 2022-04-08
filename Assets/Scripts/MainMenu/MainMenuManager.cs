@@ -14,6 +14,8 @@ public class MainMenuManager : MonoBehaviour
     public Color imgColor;
     public GameObject topBar;
     public Button btnPlay;
+    public Image pnlTransition;
+    float timeCount = 5.0f;
 
     [Space]
     [Header("PreSchoolElements")]
@@ -25,32 +27,32 @@ public class MainMenuManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        OpenClosePanels(true,false,false,false,false,true);
+        OpenClosePanels(true,false,false,true);
         btnBack.gameObject.SetActive(false);
         SubscribeToMenuButtons();
         imgColor = btnImage.color;
         uIManagerInst = FindObjectOfType<UIManager>();
+        pnlTransition.gameObject.SetActive(false);
+        pnlTransition.fillAmount = 1;
     }
 
     private void SubscribeToMenuButtons()
     {
-        //btnElementary.onClick.AddListener(OpenElementary);
-        btnPreSchool.onClick.AddListener(OpenPreSchool);
-        //btnHigh.onClick.AddListener(OpenHighSchool);
-        //btnBack.onClick.AddListener(BackToMain);
         
+        btnPreSchool.onClick.AddListener(OpenPreSchool);
     }
 
     
     private void OpenPreSchool()
     {
-        OpenClosePanels(false, true, true, false, false, false);
+        pnlTransition.gameObject.SetActive(true);
+        OpenClosePanels(false, true, true, false);
         btnBack.gameObject.SetActive(true);
         StartCoroutine(ImageOpacity());
         btnPlay.onClick.AddListener(() => LoadLevelGame("PreSchoolGame"));
 
     }
-
+    
     
 
     public void LoadLevelGame(string nameScene)
@@ -58,13 +60,11 @@ public class MainMenuManager : MonoBehaviour
         SceneManager.LoadScene(nameScene);
     }
 
-    void OpenClosePanels(bool pnlMain, bool pnlNext, bool pnlPre, bool pnlEle, bool pnlHigh, bool topB)
+    void OpenClosePanels(bool pnlMain, bool pnlNext, bool pnlPre, bool topB)
     {
         pnlMainMenuButtons.SetActive(pnlMain);
         pnlNextSelection.SetActive(pnlNext);
         pnlPreS.SetActive(pnlPre);
-        //pnlElementary.SetActive(pnlEle);
-        //pnlHighS.SetActive(pnlHigh);
         topBar.SetActive(topB);
     }
 
@@ -93,6 +93,14 @@ public class MainMenuManager : MonoBehaviour
         /*yield return null;*/
     }
 
+    private void FixedUpdate()
+    {
+        if(pnlTransition.gameObject.activeInHierarchy)
+            pnlTransition.fillAmount -=1.0f/ timeCount * Time.deltaTime;
+
+        if (pnlTransition.fillAmount == 0)
+            pnlTransition.gameObject.SetActive(false);
+    }
     #region NotInUse
     /*public List<GameObject> sprImagesPre = new List<GameObject>();
     GameObject currentImage;*/
